@@ -4,7 +4,17 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 :root{--ink:#292524;--muted:#78716c;--paper:#fffaf4;--brand:#c2410c;--line:#fed7aa}*{box-sizing:border-box}body{margin:0;font-family:"Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--paper)}header{height:76px;padding:13px 20px;background:#7c2d12;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:20px;margin:0 0 6px}.sub{font-size:12px;color:#ffedd5}.layout{height:calc(100vh - 76px);display:grid;grid-template-columns:380px 1fr}.side{overflow:auto;border-right:1px solid var(--line);background:#fff}.controls{position:sticky;top:0;z-index:20;padding:14px;background:#fff;border-bottom:1px solid var(--line)}input,select{width:100%;padding:10px 12px;border:1px solid #d6d3d1;border-radius:9px;background:#fff;font-size:14px}.row{display:grid;grid-template-columns:1fr 130px;gap:8px;margin-top:8px}.legend{font-size:12px;color:var(--muted);line-height:1.55;margin-top:9px}.card{padding:14px;border-bottom:1px solid #f5e6d8}.card:hover{background:#fff7ed}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.name{font-weight:700}.pill{font-size:11px;padding:3px 7px;border-radius:99px;white-space:nowrap}.meta,.evidence{font-size:12px;line-height:1.55;margin-top:6px}.meta{color:var(--muted)}.evidence{color:#44403c}.actions{display:flex;gap:8px;margin-top:9px}.btn{font-size:12px;text-decoration:none;color:#9a3412;background:#ffedd5;border-radius:7px;padding:6px 9px}.locate{border:0;cursor:pointer}#map{height:100%;background:#eee}.leaflet-popup-content{line-height:1.55}.leaflet-popup-content h3{margin:0 0 6px;color:#7c2d12}.warning{font-size:12px;color:#92400e;background:#fef3c7;padding:7px;border-radius:6px;margin-top:7px}@media(max-width:760px){header{height:auto}.layout{height:auto;display:flex;flex-direction:column}.side{height:48vh;border-right:0}.mapwrap,#map{height:52vh}}
-</style></head><body>
+</style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?92ffff9f221d2bcd2c500f96e4d53ff0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head><body>
 <header><div><h1>【徐州】守望先锋社区群 · 美食地图</h1><div class="sub">本机可读取：2026-05-05—2026-07-22｜55 个归并线索｜绘制 22 个已核验位置点</div></div><div class="sub">已校正地图坐标系；未核验地点不再画假坐标</div></header>
 <div class="layout"><aside class="side"><div class="controls"><input id="q" placeholder="搜店名、品类、位置线索"><div class="row"><select id="sent"><option value="">全部评价</option><option>推荐</option><option>褒贬不一</option><option>待确认</option><option>仅提及</option><option>避雷</option></select><select id="mapped"><option value="">全部地点</option><option value="yes">地图上有约点</option><option value="no">暂无坐标</option></select></div><div class="legend">🟠 推荐　🟡 褒贬不一　🔴 避雷　🟣 待确认　⚪ 仅提及<br>地图仅画有坐标的线索；侧栏会保留全部 55 条。</div></div><div id="list"></div></aside><main class="mapwrap"><div id="map"></div></main></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
